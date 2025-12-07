@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pujara Dhruv | Android Developer | Lowest Prices Guaranteed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --android-green: #3DDC84;
+            --android-dark: #0F0F23;
+            --android-card: #1A1A2E;
+            --android-gray: #2D2D44;
+            --android-light: #E0E0E0;
+            --android-purple: #BB86FC;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --shadow-hover: 0 15px 40px rgba(61, 220, 132, 0.2);
+            --glow: 0 0 15px rgba(61, 220, 132, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--android-light);
+            background-color: var(--android-dark);
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(61, 220, 132, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(187, 134, 252, 0.05) 0%, transparent 20%);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+            border-bottom: 1px solid var(--android-gray);
+        }
+
+        .header-scrolled {
+            padding: 10px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--android-green);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: var(--android-green);
+        }
+
+        .logo span {
+            color: var(--android-purple);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--android-light);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--android-green);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--android-green);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--android-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            color: var(--android-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--android-green) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--android-purple) 0%, transparent 70%);
+            bottom: -100px;
+            left: -100px;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, var(--android-green), var(--android-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.5rem;
+            color: var(--android-light);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .highlight {
+            color: var(--android-green);
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background-color: rgba(61, 220, 132, 0.2);
+            z-index: -1;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #B0B0B0;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            line-height: 1.8;
+        }
+
+        .price-badge {
+            display: inline-block;
+            background-color: rgba(61, 220, 132, 0.1);
+            color: var(--android-green);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1rem;
+            border: 1px solid rgba(61, 220, 132, 0.3);
+            font-family: 'JetBrains Mono', monospace;
+            box-shadow: var(--glow);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--android-green);
+            color: var(--android-dark);
+        }
+
+        .btn-primary:hover {
+            background-color: #2BC973;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--android-green);
+            border: 2px solid var(--android-green);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(61, 220, 132, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .android-phone {
+            position: relative;
+            width: 300px;
+            height: 600px;
+            background-color: var(--android-card);
+            border-radius: 40px;
+            box-shadow:
+                inset 0 0 20px rgba(0, 0, 0, 0.5),
+                0 20px 50px rgba(0, 0, 0, 0.7);
+            border: 10px solid #111;
+            overflow: hidden;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border-radius: 30px;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 25px;
+            background-color: #111;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            z-index: 2;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .app-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            margin: 0 auto;
+            transition: var(--transition);
+        }
+
+        .app-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .music-player {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 20px;
+            border: 1px solid var(--android-gray);
+        }
+
+        .music-player h4 {
+            color: var(--android-green);
+            font-size: 1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .music-player p {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .music-link {
+            display: inline-block;
+            background-color: var(--android-purple);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .music-link:hover {
+            background-color: #a56bf0;
+            transform: translateY(-2px);
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: rgba(26, 26, 46, 0.7);
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            color: var(--android-light);
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: var(--android-green);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: #B0B0B0;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background-color: var(--android-card);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid var(--android-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--android-green), var(--android-purple));
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--android-green);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--android-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--android-light);
+        }
+
+        .skill-card p {
+            color: #B0B0B0;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background-color: var(--android-dark);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            background-color: var(--android-card);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--android-gray);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--android-green);
+        }
+
+        .portfolio-img {
+            height: 200px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--android-green);
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-img::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--android-light);
+        }
+
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background-color: rgba(61, 220, 132, 0.1);
+            color: var(--android-green);
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Music App Section */
+        .music-app {
+            background-color: rgba(26, 26, 46, 0.7);
+            position: relative;
+        }
+
+        .music-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .music-content h2 {
+            font-size: 2.5rem;
+            color: var(--android-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .music-content h2 span {
+            color: var(--android-purple);
+        }
+
+        .music-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .music-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--android-gray);
+            display: flex;
+            align-items: center;
+            color: #B0B0B0;
+        }
+
+        .music-features li i {
+            color: var(--android-green);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .music-visualization {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .music-visual {
+            width: 300px;
+            height: 300px;
+            background-color: var(--android-card);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow:
+                inset 0 0 30px rgba(0, 0, 0, 0.5),
+                0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--android-green);
+        }
+
+        .music-visual::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(var(--android-purple), var(--android-green), var(--android-purple));
+            animation: rotate 10s linear infinite;
+            opacity: 0.1;
+        }
+
+        .music-visual i {
+            font-size: 5rem;
+            color: var(--android-purple);
+            z-index: 2;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background-color: var(--android-dark);
+        }
+
+        .pricing-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .pricing-header h2 {
+            font-size: 2.5rem;
+            color: var(--android-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-highlight {
+            display: inline-block;
+            background-color: rgba(187, 134, 252, 0.1);
+            color: var(--android-purple);
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            border: 1px solid rgba(187, 134, 252, 0.3);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background-color: var(--android-card);
+            border-radius: 15px;
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid var(--android-gray);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--android-green);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            color: var(--android-light);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--android-green);
+            margin: 1.5rem 0;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #B0B0B0;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--android-gray);
+            display: flex;
+            align-items: center;
+            color: #B0B0B0;
+        }
+
+        .pricing-features li i {
+            color: var(--android-green);
+            margin-right: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: rgba(26, 26, 46, 0.7);
+            position: relative;
+        }
+
+        .contact .section-title h2 {
+            color: var(--android-light);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            color: var(--android-light);
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: #B0B0B0;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--android-green);
+            margin-right: 15px;
+            width: 30px;
+        }
+
+        .contact-item strong {
+            color: var(--android-light);
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--android-card);
+            border-radius: 50%;
+            color: var(--android-light);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid var(--android-gray);
+        }
+
+        .social-link:hover {
+            background-color: var(--android-green);
+            color: var(--android-dark);
+            transform: translateY(-5px);
+            border-color: var(--android-green);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--android-gray);
+            border-radius: 8px;
+            background-color: var(--android-card);
+            color: var(--android-light);
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--android-green);
+            box-shadow: 0 0 0 2px rgba(61, 220, 132, 0.2);
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0A0A18;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 50px 0 30px;
+            text-align: center;
+            border-top: 1px solid var(--android-gray);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .hero-text p {
+                max-width: 100%;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .music-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .android-phone {
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(15, 15, 35, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                box-shadow: var(--shadow);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                border-bottom: 1px solid var(--android-gray);
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .portfolio-grid,
+            .pricing-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .android-phone {
+                width: 250px;
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-text .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .music-visual {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fab fa-android"></i> Dhruv<span>Android</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#music">Music App</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Pujara Dhruv</h1>
+                <div class="subtitle">Android & Web Developer</div>
+                <p>I create stunning Android applications and responsive websites with cutting-edge technology and
+                    seamless user experiences. Specializing in mobile-first design and efficient development.</p>
+
+                <div class="price-badge">
+                    <i class="fas fa-tags"></i> Lowest Prices Guaranteed
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get a Quote</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="android-phone">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div>
+                            <h4 style="color: var(--android-green); margin-bottom: 10px;">My Apps</h4>
+                            <div class="app-grid">
+                                <div class="app-icon" style="background-color: #3DDC84;">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="app-icon" style="background-color: #BB86FC;">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <div class="app-icon" style="background-color: #03DAC6;">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="app-icon" style="background-color: #FF0266;">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="app-icon" style="background-color: #FFDE03;">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <div class="app-icon" style="background-color: #3700B3;">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="music-player">
+                            <h4><i class="fas fa-music"></i> DD Music 29</h4>
+                            <p>Ad-free music streaming web app. Listen to your favorite tracks without interruptions.
+                            </p>
+                            <a href="https://ddmusic29.onrender.com" target="_blank" class="music-link">
+                                <i class="fas fa-external-link-alt"></i> Listen Now
+                            </a>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <div style="color: var(--android-green); font-size: 0.8rem;">
+                                <i class="fas fa-bolt"></i> Fast Development
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+                <p>Technologies and tools I specialize in</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h3>Android Development</h3>
+                    <p>Native Android apps with Java & Kotlin, Material Design, Firebase integration, and Google Play
+                        Store deployment.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Responsive websites with HTML5, CSS3, JavaScript, React, and modern frameworks for optimal user
+                        experience.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Backend & APIs</h3>
+                    <p>RESTful API development, database design, server management, and cloud integration for full-stack
+                        solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Portfolio</h2>
+                <p>Some of my recent projects</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>E-Commerce App</h3>
+                        <div class="portfolio-tags">
+                            <span class="tag">Android</span>
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Payment Gateway</span>
+                        </div>
+                        <p>Full-featured shopping app with product catalog, cart, user accounts, and secure payments.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Task Manager</h3>
+                        <div class="portfolio-tags">
+                            <span class="tag">Android</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Notifications</span>
+                        </div>
+                        <p>Productivity app with task organization, reminders, categories, and progress tracking.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Fitness Tracker</h3>
+                        <div class="portfolio-tags">
+                            <span class="tag">Android</span>
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Google Fit API</span>
+                            <span class="tag">Charts</span>
+                        </div>
+                        <p>Health and fitness app with workout plans, progress charts, and activity tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music App Section -->
+    <section class="music-app" id="music">
+        <div class="container">
+            <div class="music-container">
+                <div class="music-content">
+                    <h2>DD Music 29 <span>Web App</span></h2>
+                    <p>A completely free, ad-free music streaming web application built with modern web technologies.
+                        Enjoy uninterrupted music listening without any subscriptions or ads.</p>
+
+                    <ul class="music-features">
+                        <li><i class="fas fa-check-circle"></i> 100% Free - No hidden charges</li>
+                        <li><i class="fas fa-check-circle"></i> Ad-free listening experience</li>
+                        <li><i class="fas fa-check-circle"></i> Large music library</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive design - works on all devices</li>
+                        <li><i class="fas fa-check-circle"></i> No registration required</li>
+                    </ul>
+
+                    <a href="https://ddmusic29.onrender.com" target="_blank" class="btn btn-primary"
+                        style="margin-top: 1rem;">
+                        <i class="fas fa-external-link-alt"></i> Visit DD Music 29
+                    </a>
+                </div>
+
+                <div class="music-visualization">
+                    <div class="music-visual">
+                        <i class="fas fa-music"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="pricing-header">
+                <h2>Affordable Development Services</h2>
+                <p>I believe in providing high-quality development services at the most competitive prices in the
+                    market. My goal
