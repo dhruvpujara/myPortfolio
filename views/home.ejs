@@ -112,6 +112,47 @@
             align-items: center;
         }
 
+        /* Platform-specific styles */
+        .whatsapp-link {
+            background-color: white;
+            color: var(--whatsapp-green);
+        }
+
+        .whatsapp-link::before {
+            background: var(--whatsapp-green);
+        }
+
+        .whatsapp-link:hover {
+            color: white;
+        }
+
+        .instagram-link {
+            background-color: white;
+            color: var(--instagram-purple);
+        }
+
+        .instagram-link::before {
+            background: var(--instagram-purple);
+        }
+
+        .instagram-link:hover {
+            color: white;
+        }
+
+        /* LinkedIn specific styling */
+        .linkedin-link {
+            background-color: white;
+            color: #0077B5;
+        }
+
+        .linkedin-link::before {
+            background: #0077B5;
+        }
+
+        .linkedin-link:hover {
+            color: white;
+        }
+
         .logo {
             font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
@@ -1443,7 +1484,8 @@
                     </div>
                 </div>
 
-                <!-- Social Links with Instagram (replaced LinkedIn) -->
+
+                <!-- Social Links with LinkedIn (replaced Twitter) -->
                 <div class="social-links">
                     <a href="https://github.com" target="_blank" class="social-link">
                         <i class="fab fa-github"></i>
@@ -1455,8 +1497,9 @@
                     <a href="https://instagram.com/tobii._.29" target="_blank" class="social-link instagram-link">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://twitter.com" target="_blank" class="social-link">
-                        <i class="fab fa-twitter"></i>
+                    <a href="https://www.linkedin.com/in/dhruv-pujara-89349b3a2/" target="_blank"
+                        class="social-link linkedin-link">
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
             </div>
@@ -1605,6 +1648,14 @@
         document.querySelectorAll('a[href*="instagram.com"]').forEach(instaLink => {
             instaLink.addEventListener('click', function () {
                 console.log('Instagram link clicked - Opening profile tobii._.29');
+                // You could add analytics tracking here
+            });
+        });
+
+        // LinkedIn click tracking (optional)
+        document.querySelectorAll('a[href*="linkedin.com/in/dhruv-pujara"]').forEach(linkedinLink => {
+            linkedinLink.addEventListener('click', function () {
+                console.log('LinkedIn link clicked - Opening profile dhruv-pujara');
                 // You could add analytics tracking here
             });
         });
