@@ -5,6 +5,8 @@ const PORT = 3000;
 
 app.use(express.static(__dirname));
 app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', path.join(__dirname, 'views'));
 
 // Keep-alive endpoint for Render - MUST COME BEFORE '*'
 app.get('/ping', (req, res) => {
@@ -24,7 +26,7 @@ app.get('/health', (req, res) => {
 
 // Home route - MUST COME BEFORE '*'
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('index');
 });
 
 
