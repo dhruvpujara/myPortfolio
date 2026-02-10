@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv Pujara | Web Developer | DD Music 29 Creator</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="/css/expertise.css">
+    <link rel="stylesheet" href="/css/portfolio.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <header id="header">
+    <div class="container nav-container">
+        <a href="#" class="logo">
+            <i class="fas fa-code"></i> Dhruv
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
+    
+    <!-- Main Content -->
+    <main>
+        <%- include('partials/hero') %>
+        <%- include('partials/expertise') %>
+        <%- include('partials/portfolio') %>
+        <%- include('partials/contact') %>
+    </main>
+    
+    <!-- Include Footer -->
+    <%- include('partials/footer') %>
+    
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+</body>
+</html>
