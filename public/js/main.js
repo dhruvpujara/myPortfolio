@@ -182,16 +182,23 @@ document.querySelectorAll('a[href*="linkedin.com/in/dhruv-pujara"]').forEach(lin
 });
 
 
+// Hero visual interaction
+const heroVisual = document.querySelector('.code-visual');
+const studioCard = document.querySelector('.studio-card');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+if (heroVisual && studioCard && !prefersReducedMotion) {
+    heroVisual.addEventListener('mousemove', (event) => {
+        const rect = heroVisual.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const rotateY = ((x / rect.width) - 0.5) * 10;
+        const rotateX = (0.5 - (y / rect.height)) * 8;
 
+        studioCard.style.transform = `rotateX(${10 + rotateX}deg) rotateY(${-14 + rotateY}deg) translateZ(12px)`;
+    });
 
-
-
-
-
-
-
-
-
-
-
+    heroVisual.addEventListener('mouseleave', () => {
+        studioCard.style.transform = '';
+    });
+}
