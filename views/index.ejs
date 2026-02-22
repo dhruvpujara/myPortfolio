@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhruv Pujara | Web Developer | DD Music 29 Creator</title>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@800;900&display=swap"
+        rel="stylesheet">
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/header.css">
@@ -22,332 +25,372 @@
     <link rel="stylesheet" href="/css/contact.css">
     <link rel="stylesheet" href="/css/footer.css">
 </head>
+
 <body>
     <!-- Include Header -->
     <header id="header">
-    <div class="container nav-container">
-        <a href="#" class="logo">
-            <i class="fas fa-code"></i> Dhruv
-        </a>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-code"></i> Dhruv
+            </a>
 
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-            <i class="fas fa-bars"></i>
-        </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
 
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-</header>
-    
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
     <!-- Main Content -->
     <main>
         <section class="hero" id="home">
-    <div class="hero-bg-animation">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-    </div>
-
-    <div class="container hero-content">
-        <div class="hero-text">
-            <h1>I'm <span class="name">Dhruv Pujara</span></h1>
-            <div class="subtitle">Professional Web Developer</div>
-            <p>I create stunning, responsive websites and web applications with cutting-edge technologies. My focus
-                is on delivering exceptional user experiences with clean, efficient code.</p>
-
-            <div class="price-badge">
-                <i class="fas fa-tags"></i> Quality Projects at Lowest Prices
+            <div class="hero-bg-animation">
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
             </div>
 
-            <div class="cta-buttons">
-                <a href="#portfolio" class="btn btn-primary">
-                    <i class="fas fa-eye"></i> View My Work
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-paper-plane"></i> Get a Quote
-                </a>
-            </div>
-        </div>
 
-        <div class="hero-visual">
-            <div class="code-visual"></div>
-        </div>
 
-        <div class="floating-cards-container">
-            <div class="floating-card">
-                <i class="fas fa-rocket"></i>
-                <div>Fast Delivery</div>
+
+
+
+            <!-- Add this inside the hero section, right after hero-bg-animation div -->
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
             </div>
 
-            <div class="floating-card">
-                <i class="fas fa-medal"></i>
-                <div>Quality Guaranteed</div>
+            <!-- Add glowing orbs -->
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+            <div class="glow-orb orb-3"></div>
+
+            <!-- Add scroll progress indicator (add right after body tag) -->
+            <div class="scroll-progress" id="scrollProgress"></div>
+
+            <!-- Add floating action button (add before closing body tag) -->
+            <div class="fab-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <i class="fas fa-arrow-up"></i>
             </div>
 
-            <div class="floating-card">
-                <i class="fas fa-hand-holding-usd"></i>
-                <div>Best Prices</div>
+
+
+
+
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>I'm <span class="name">Dhruv Pujara</span></h1>
+                    <div class="subtitle">Professional Web Developer</div>
+                    <p>I create stunning, responsive websites and web applications with cutting-edge technologies. My
+                        focus
+                        is on delivering exceptional user experiences with clean, efficient code.</p>
+
+                    <div class="price-badge">
+                        <i class="fas fa-tags"></i> Quality Projects at Lowest Prices
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="#portfolio" class="btn btn-primary">
+                            <i class="fas fa-eye"></i> View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Get a Quote
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="code-visual"></div>
+                </div>
+
+                <div class="floating-cards-container">
+                    <div class="floating-card">
+                        <i class="fas fa-rocket"></i>
+                        <div>Fast Delivery</div>
+                    </div>
+
+                    <div class="floating-card">
+                        <i class="fas fa-medal"></i>
+                        <div>Quality Guaranteed</div>
+                    </div>
+
+                    <div class="floating-card">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <div>Best Prices</div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
         <section class="expertise" id="expertise">
-    <div class="container">
-        <div class="section-title">
-            <h2>My <span>Expertise</span></h2>
-            <p>Skills and technologies I excel in for building amazing web experiences</p>
-        </div>
+            <div class="container">
+                <div class="section-title">
+                    <h2>My <span>Expertise</span></h2>
+                    <p>Skills and technologies I excel in for building amazing web experiences</p>
+                </div>
 
-        <!-- Desktop Expertise Grid -->
-        <div class="expertise-container">
-            <div class="expertise-card">
-                <div class="expertise-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <div class="expertise-content">
-                    <h3>Frontend Development</h3>
-                    <p>Crafting beautiful, responsive interfaces using HTML5, CSS3, and JavaScript with modern frameworks and libraries.</p>
-                </div>
-            </div>
+                <!-- Desktop Expertise Grid -->
+                <div class="expertise-container">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="expertise-content">
+                            <h3>Frontend Development</h3>
+                            <p>Crafting beautiful, responsive interfaces using HTML5, CSS3, and JavaScript with modern
+                                frameworks and libraries.</p>
+                        </div>
+                    </div>
 
-            <div class="expertise-card">
-                <div class="expertise-icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <div class="expertise-content">
-                    <h3>Backend Development</h3>
-                    <p>Building robust server-side applications with Node.js, Express, and database management systems.</p>
-                </div>
-            </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="expertise-content">
+                            <h3>Backend Development</h3>
+                            <p>Building robust server-side applications with Node.js, Express, and database management
+                                systems.</p>
+                        </div>
+                    </div>
 
-            <div class="expertise-card">
-                <div class="expertise-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div class="expertise-content">
-                    <h3>Responsive Design</h3>
-                    <p>Creating websites that work perfectly on all devices from mobile phones to desktop computers.</p>
-                </div>
-            </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="expertise-content">
+                            <h3>Responsive Design</h3>
+                            <p>Creating websites that work perfectly on all devices from mobile phones to desktop
+                                computers.</p>
+                        </div>
+                    </div>
 
-            <div class="expertise-card">
-                <div class="expertise-icon">
-                    <i class="fas fa-bolt"></i>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="expertise-content">
+                            <h3>Performance Optimization</h3>
+                            <p>Ensuring fast loading times and smooth user experiences through code optimization and
+                                best practices.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="expertise-content">
-                    <h3>Performance Optimization</h3>
-                    <p>Ensuring fast loading times and smooth user experiences through code optimization and best practices.</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Mobile Message (Hidden on Desktop) -->
-        <div class="mobile-message" style="display: none;">
-            <div class="icon">
-                <i class="fas fa-desktop"></i>
-            </div>
-            <h3>View on Desktop</h3>
-            <p>For the best experience viewing my expertise and skills, please visit this portfolio on a desktop or tablet device. The interactive expertise section is optimized for larger screens.</p>
-            <a href="#contact" class="cta-button">
-                <i class="fas fa-envelope"></i> Contact Me for Details
-            </a>
-        </div>
+                <!-- Mobile Message (Hidden on Desktop) -->
+                <div class="mobile-message" style="display: none;">
+                    <div class="icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>View on Desktop</h3>
+                    <p>For the best experience viewing my expertise and skills, please visit this portfolio on a desktop
+                        or tablet device. The interactive expertise section is optimized for larger screens.</p>
+                    <a href="#contact" class="cta-button">
+                        <i class="fas fa-envelope"></i> Contact Me for Details
+                    </a>
+                </div>
 
-        <!-- Technology Logos (Visible on all devices) -->
-        <div class="tech-logos">
-            <div class="section-title">
-                <h3>Technologies I Use</h3>
+                <!-- Technology Logos (Visible on all devices) -->
+                <div class="tech-logos">
+                    <div class="section-title">
+                        <h3>Technologies I Use</h3>
+                    </div>
+                    <div class="tech-logos-container">
+                        <div class="tech-logo html-logo">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="tech-logo css-logo">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="tech-logo js-logo">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="tech-logo node-logo">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="tech-logo mongo-logo">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="tech-logo java-logo">
+                            <i class="fab fa-java"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="tech-logos-container">
-                <div class="tech-logo html-logo">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <div class="tech-logo css-logo">
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <div class="tech-logo js-logo">
-                    <i class="fab fa-js"></i>
-                </div>
-                <div class="tech-logo node-logo">
-                    <i class="fab fa-node-js"></i>
-                </div>
-                <div class="tech-logo mongo-logo">
-                    <i class="fas fa-database"></i>
-                </div>
-                <div class="tech-logo java-logo">
-                    <i class="fab fa-java"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
         <section class="portfolio" id="portfolio">
-    <div class="container">
-        <div class="section-title">
-            <h2>My <span>Portfolio</span></h2>
-            <p>Featured project that showcases my web development skills</p>
-        </div>
+            <div class="container">
+                <div class="section-title">
+                    <h2>My <span>Portfolio</span></h2>
+                    <p>Featured project that showcases my web development skills</p>
+                </div>
 
-        <div class="portfolio-container">
-            <!-- 1. Heading -->
-            <div class="portfolio-heading">
-                <h3>DD Music 29</h3>
-            </div>
+                <div class="portfolio-container">
+                    <!-- 1. Heading -->
+                    <div class="portfolio-heading">
+                        <h3>DD Music 29</h3>
+                    </div>
 
-            <!-- 2. Phone Device -->
-            <div class="portfolio-phone">
-                <div class="phone-container">
-                    <div class="phone-frame">
-                        <div class="phone-notch"></div>
-                        <div class="phone-speaker"></div>
-                        <div class="phone-screen">
-                            <div class="music-app-header">
-                                <i class="fas fa-music"></i>
-                                <h4>DD Music 29</h4>
-                                <p>Ad-Free Music Streaming</p>
-                            </div>
-
-                            <div class="music-player-controls">
-                                <div class="song-info">
-                                    <div class="song-cover">
-                                        <i class="fas fa-headphones"></i>
+                    <!-- 2. Phone Device -->
+                    <div class="portfolio-phone">
+                        <div class="phone-container">
+                            <div class="phone-frame">
+                                <div class="phone-notch"></div>
+                                <div class="phone-speaker"></div>
+                                <div class="phone-screen">
+                                    <div class="music-app-header">
+                                        <i class="fas fa-music"></i>
+                                        <h4>DD Music 29</h4>
+                                        <p>Ad-Free Music Streaming</p>
                                     </div>
-                                    <div class="song-details">
-                                        <h5>Currently Playing</h5>
-                                        <p>Your Favorite Song</p>
+
+                                    <div class="music-player-controls">
+                                        <div class="song-info">
+                                            <div class="song-cover">
+                                                <i class="fas fa-headphones"></i>
+                                            </div>
+                                            <div class="song-details">
+                                                <h5>Currently Playing</h5>
+                                                <p>Your Favorite Song</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="player-controls">
+                                            <button class="control-btn">
+                                                <i class="fas fa-step-backward"></i>
+                                            </button>
+                                            <button class="control-btn play-btn">
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                            <button class="control-btn">
+                                                <i class="fas fa-step-forward"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="music-wave">
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
                                     </div>
                                 </div>
-
-                                <div class="player-controls">
-                                    <button class="control-btn">
-                                        <i class="fas fa-step-backward"></i>
-                                    </button>
-                                    <button class="control-btn play-btn">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                    <button class="control-btn">
-                                        <i class="fas fa-step-forward"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="music-wave">
-                                <div class="wave-bar"></div>
-                                <div class="wave-bar"></div>
-                                <div class="wave-bar"></div>
-                                <div class="wave-bar"></div>
-                                <div class="wave-bar"></div>
-                                <div class="wave-bar"></div>
-                                <div class="wave-bar"></div>
-                                <div class="wave-bar"></div>
-                                <div class="wave-bar"></div>
-                                <div class="wave-bar"></div>
+                                <div class="phone-home-button"></div>
                             </div>
                         </div>
-                        <div class="phone-home-button"></div>
+                    </div>
+
+                    <!-- 3. Paragraph -->
+                    <div class="portfolio-description">
+                        <p>DD Music 29 is a completely free, ad-free music streaming web application that I developed to
+                            provide uninterrupted music listening experience. The platform offers a vast library of
+                            songs
+                            across multiple genres without any subscription fees or advertisements.</p>
+                    </div>
+
+                    <!-- 4. Button -->
+                    <div class="portfolio-button">
+                        <a href="https://ddmusic29.onrender.com" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Visit Website
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <!-- 3. Paragraph -->
-            <div class="portfolio-description">
-                <p>DD Music 29 is a completely free, ad-free music streaming web application that I developed to
-                    provide uninterrupted music listening experience. The platform offers a vast library of songs
-                    across multiple genres without any subscription fees or advertisements.</p>
-            </div>
-
-            <!-- 4. Button -->
-            <div class="portfolio-button">
-                <a href="https://ddmusic29.onrender.com" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-external-link-alt"></i> Visit Website
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
         <section class="contact" id="contact">
-    <div class="container">
-        <div class="section-title">
-            <h2>Get In <span>Touch</span></h2>
-            <p>Let's discuss your project and bring your ideas to life</p>
-        </div>
-
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-            </div>
-
-            <div class="contact-details">
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div class="contact-text">
-                        <h4>Phone Number</h4>
-                        <p class="phone-number">+91 7046056443</p>
-                    </div>
+            <div class="container">
+                <div class="section-title">
+                    <h2>Get In <span>Touch</span></h2>
+                    <p>Let's discuss your project and bring your ideas to life</p>
                 </div>
 
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div class="contact-text">
-                        <h4>Email Address</h4>
-                        <p>pujaradhruv373@gmail.com</p>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
                     </div>
-                </div>
 
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div class="contact-text">
-                        <h4>Availability</h4>
-                        <p>Available for remote projects worldwide</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="contact-text">
+                                <h4>Phone Number</h4>
+                                <p class="phone-number">+91 7046056443</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-text">
+                                <h4>Email Address</h4>
+                                <p>pujaradhruv373@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-text">
+                                <h4>Availability</h4>
+                                <p>Available for remote projects worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://wa.me/917046056443?text=Hello%20Dhruv!%20I%20visited%20your%20portfolio%20website%20and%20I'm%20interested%20in%20discussing%20a%20project%20with%20you."
+                            target="_blank" class="social-link whatsapp-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/tobii._.29" target="_blank" class="social-link instagram-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dhruv-pujara-89349b3a2/" target="_blank"
+                            class="social-link linkedin-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <!-- Social Links -->
-            <div class="social-links">
-                <a href="https://github.com" target="_blank" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://wa.me/917046056443?text=Hello%20Dhruv!%20I%20visited%20your%20portfolio%20website%20and%20I'm%20interested%20in%20discussing%20a%20project%20with%20you."
-                    target="_blank" class="social-link whatsapp-link">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://instagram.com/tobii._.29" target="_blank" class="social-link instagram-link">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/dhruv-pujara-89349b3a2/" target="_blank"
-                    class="social-link linkedin-link">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
-    
+
     <!-- Include Footer -->
     <footer>
-    <div class="footer-bg"></div>
-    <div class="container">
-        <div class="footer-content">
-            <a href="#" class="logo" style="color: white;">
-                <i class="fas fa-code"></i> Dhruv Pujara
-            </a>
-            <div style="font-size: 1.2rem;">
-                Web Developer | DD Music 29 Creator
+        <div class="footer-bg"></div>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo" style="color: white;">
+                    <i class="fas fa-code"></i> Dhruv Pujara
+                </a>
+                <div style="font-size: 1.2rem;">
+                    Web Developer | DD Music 29 Creator
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Dhruv Pujara. All rights reserved. | Quality Projects at Best Prices
             </div>
         </div>
-        <div class="copyright">
-            &copy; 2023 Dhruv Pujara. All rights reserved. | Quality Projects at Best Prices
-        </div>
-    </div>
-</footer>
-    
+    </footer>
+
     <!-- JavaScript -->
     <script src="/js/main.js"></script>
 </body>
+
 </html>

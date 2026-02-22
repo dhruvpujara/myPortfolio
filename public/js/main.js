@@ -195,3 +195,77 @@ document.querySelectorAll('a[href*="linkedin.com/in/dhruv-pujara"]').forEach(lin
 
 
 
+// Add to your main.js file
+
+// Scroll Progress Indicator
+window.addEventListener('scroll', () => {
+    const scrollProgress = document.getElementById('scrollProgress');
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (window.pageYOffset / totalHeight) * 100;
+    scrollProgress.style.width = progress + '%';
+});
+
+// Typing Effect
+const subtitle = document.querySelector('.subtitle');
+if (subtitle) {
+    subtitle.classList.add('typing-effect');
+}
+
+// 3D Tilt Effect
+document.querySelectorAll('.tilt-effect').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = (y - centerY) / 10;
+        const rotateY = (centerX - x) / 10;
+
+        card.style.setProperty('--rotateX', rotateX + 'deg');
+        card.style.setProperty('--rotateY', rotateY + 'deg');
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--rotateX', '0deg');
+        card.style.setProperty('--rotateY', '0deg');
+    });
+});
+
+// Ripple Effect on Buttons
+document.querySelectorAll('.ripple-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple-effect');
+
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+
+        button.appendChild(ripple);
+
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+});
+
+// Add gradient-text class to section titles
+document.querySelectorAll('.section-title h2 span').forEach(span => {
+    span.classList.add('gradient-text');
+});
+
+// Add tilt-effect to cards
+document.querySelectorAll('.expertise-card, .floating-card, .contact-item').forEach(card => {
+    card.classList.add('tilt-effect');
+});
+
+// Add ripple-btn to buttons
+document.querySelectorAll('.btn, .social-link').forEach(btn => {
+    btn.classList.add('ripple-btn');
+});
